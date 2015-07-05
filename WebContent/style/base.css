@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+body{
+		background: url(../images/back.jpg);
+	}
+	#userDiv1{
+	border:1px solid green;
+	width:35%;
+	height:30%;
+	margin-top:10%;
+	margin-left:30%;
+	color:green;
+	}
+	#smt{
+		color:white;
+		background:green;
+		border-radius:7px;	
+	}

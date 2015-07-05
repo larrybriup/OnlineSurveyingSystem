@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		    xsi:schemaLocation="
+   http://www.springframework.org/schema/beans 
+   http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+   <bean name="questionService" class="com.eagle.service.impl.QuestionnaireServiceImpl" scope="prototype">
+		<property name="questionDao">
+			<ref bean="questionDao"/>
+		</property>
+	</bean>
+   <bean name="suService" class="com.eagle.service.impl.SUServiceImpl" scope="prototype">
+		<property name="suDao">
+			<ref bean="suDao"/>
+		</property>
+	</bean>
+   <bean name="userService" class="com.eagle.service.impl.UserServiceImpl" scope="prototype">
+		<property name="userDao">
+			<ref bean="userDao"/>
+		</property>
+	</bean>
+</beans>

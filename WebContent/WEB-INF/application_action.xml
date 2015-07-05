@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		    xsi:schemaLocation="
+   http://www.springframework.org/schema/beans 
+   http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+   <bean name="SummitQuestionnaireAction" class="com.eagle.web.action.SummitQuestionnaireAction" scope="prototype">
+   		<property name="questionService" >
+   			<ref bean="questionService"/>
+   		</property>
+   </bean>
+   <bean name="GetQuestionnaireAction" class="com.eagle.web.action.GetQuestionnaireAction" scope="prototype">
+   		<property name="questionService" >
+   			<ref bean="questionService"/>
+   		</property>
+   </bean>
+   <bean name="RmQuestionnaireAction" class="com.eagle.web.action.RmQuestionnaireAction" scope="prototype">
+   		<property name="questionService" >
+   			<ref bean="questionService"/>
+   		</property>
+   </bean>
+   <bean name="GetAnswerAction" class="com.eagle.web.action.GetAnswerAction" scope="prototype">
+   		<property name="questionService" >
+   			<ref bean="questionService"/>
+   		</property>
+   </bean>
+   <bean name="SaveQuestionnaireAction" class="com.eagle.web.action.SaveQuestionnaireAction" scope="prototype">
+   		<property name="questionService" >
+   			<ref bean="questionService"/>
+   		</property>
+   </bean>
+   <bean name="CreateNewFileAction" class="com.eagle.web.action.CreateNewFileAction" scope="prototype">
+   		<property name="questionService" >
+   			<ref bean="questionService"/>
+   		</property>
+   </bean>
+   <bean name="SUAction" class="com.eagle.web.action.SUAction" scope="prototype">
+   		<property name="suService" >
+   			<ref bean="suService"/>
+   		</property>
+   </bean>
+   <bean name="SUActionAjaxCheckName" class="com.eagle.web.action.SUActionAjaxCheckName" scope="prototype">
+   		<property name="suService" >
+   			<ref bean="suService"/>
+   		</property>
+   </bean>
+   <bean name="UserAction" class="com.eagle.web.action.UserAction" scope="prototype">
+   		<property name="userService" >
+   			<ref bean="userService"/>
+   		</property>
+   </bean>
+</beans>

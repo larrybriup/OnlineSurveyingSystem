@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<!-- <constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.action.extension" value="action,do"></constant>
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+	<constant name="struts.custom.i18n.resources" value="message"></constant>  -->
+	
+	<package name="question" extends="struts-default" namespace="/">
+		<action name="summitQuestionnaire" class="SummitQuestionnaireAction">
+			<result>/summitQsuccess.html</result>
+			<result name="error">/error.html</result>
+		</action>
+		<action name="getAnswer" class="GetAnswerAction">
+		</action>
+		<action name="getQuestionnaire" class="GetQuestionnaireAction">
+		</action>
+		<action name="rmQuestionnaire" class="RmQuestionnaireAction">
+			<result>/designQuestionnaire.jsp</result>
+			<result name="error">/designQuestionnaire.jsp</result>
+		</action>
+		<action name="createNewFile" class="CreateNewFileAction">
+			<result>/designQuestionnaire.jsp</result>
+			<result name="error">/designQuestionnaire.jsp</result>
+		</action>
+		<action name="saveQuestionnaire" class="SaveQuestionnaireAction">
+			<result>/designQuestionnaire.jsp</result>
+			<result name="error">/designQuestionnaire.jsp</result>
+		</action>
+		<action name="SUAjaxCheckNameAction" class="SUActionAjaxCheckName">
+		</action>
+		<action name="suRegiterAction" class="SUAction">
+			<result>/login.jsp</result>
+			<result name="error">/superuser/suRegister.jsp</result>
+		</action>
+		<action name="suLoginAction" class="SUAction" method="login">
+			<result>/designQuestionnaire.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<action name="suModifyAction" class="SUAction" method="modifySU">
+			<result>/designQuestionnaire.jsp</result>
+			<result name="error">/modifySU.jsp</result>
+		</action>
+		<action name="findPasswordAction" class="SUAction" method="findPassword">
+			<result>/login.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<action name="logoutAction" class="SUAction" method="logout">
+			<result>/login.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<action name="userRegisterAction" class="UserAction">
+			<result>/login.jsp</result>
+			<result name="error">/user/userRegister.jsp</result>
+		</action>
+		<action name="userLoginAction" class="UserAction" method="login">
+			<result>/survey.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<action name="userLogoutAction" class="UserAction" method="logout">
+			<result>/login.jsp</result>
+			<result name="error">/survey.jsp</result>
+		</action>
+	</package>
+</struts>
